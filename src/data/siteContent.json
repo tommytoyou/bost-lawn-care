@@ -1,0 +1,44 @@
+{
+  "business": {
+    "name": "Bost Lawn Care",
+    "tagline": "Your Lawn, Our Pride",
+    "phone": "(785) 555-0123",
+    "email": "info@bostlawncare.com",
+    "address": "123 Main Street, Lawrence, KS 66044",
+    "hours": "Monday - Saturday: 7am - 7pm | Sunday: Closed"
+  },
+  "homepage": {
+    "headline": "Professional Lawn Care You Can Trust",
+    "subheadline": "Serving Lawrence, KS with expert mowing, trimming, cleanups, and more. We treat every lawn like our own.",
+    "ctaText": "Ready to love your lawn again? Let Bost Lawn Care handle the hard work so you can enjoy a beautiful yard all season long."
+  },
+  "about": {
+    "paragraphs": [
+      "Bost Lawn Care is a local, family-owned business proudly serving the Lawrence, Kansas community since 2020. What started as a passion for creating beautiful outdoor spaces has grown into a trusted name in lawn care across the city. We believe every homeowner deserves a yard they can be proud of, and we bring that commitment to every property we touch.",
+      "Our team uses professional-grade equipment and proven techniques to deliver consistent, high-quality results. We take the time to understand each customer's unique needs — from soil conditions to grass type to personal preferences. At Bost Lawn Care, we don't just mow lawns; we build lasting relationships with our neighbors and treat every yard as if it were our own."
+    ],
+    "serviceArea": [
+      "Downtown",
+      "Old West Lawrence",
+      "East Lawrence",
+      "Oread",
+      "Pinckney",
+      "Prairie Park",
+      "Sunset Hills"
+    ],
+    "values": [
+      {
+        "title": "Reliability",
+        "description": "We show up on time, every time. You can count on consistent, dependable service throughout the season."
+      },
+      {
+        "title": "Quality",
+        "description": "Professional results on every visit. We hold ourselves to the highest standards and it shows in every lawn we care for."
+      },
+      {
+        "title": "Community",
+        "description": "We're proud to support local Lawrence and give back to the community that supports us. Your neighborhood is our neighborhood."
+      }
+    ]
+  }
+}

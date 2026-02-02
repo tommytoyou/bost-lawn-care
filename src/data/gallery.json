@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "imageUrl": "https://images.unsplash.com/photo-1592150621744-aca64f48394a?w=800",
+    "category": "Mowing",
+    "caption": "Fresh-cut lawn with clean stripes"
+  },
+  {
+    "id": 2,
+    "imageUrl": "https://images.unsplash.com/photo-1589923188651-268a9765e432?w=800",
+    "category": "Mowing",
+    "caption": "Precision mowing and edging"
+  },
+  {
+    "id": 3,
+    "imageUrl": "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=800",
+    "category": "Mowing",
+    "caption": "Beautifully maintained residential lawn"
+  },
+  {
+    "id": 4,
+    "imageUrl": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800",
+    "category": "Cleanups",
+    "caption": "Garden bed after spring cleanup"
+  },
+  {
+    "id": 5,
+    "imageUrl": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800",
+    "category": "Cleanups",
+    "caption": "Fall leaf removal completed"
+  },
+  {
+    "id": 6,
+    "imageUrl": "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=800",
+    "category": "Cleanups",
+    "caption": "Property after full seasonal cleanup"
+  },
+  {
+    "id": 7,
+    "imageUrl": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800",
+    "category": "Transformations",
+    "caption": "Complete yard transformation",
+    "beforeImage": "https://images.unsplash.com/photo-1558635924-b60e7f7e3d63?w=800"
+  },
+  {
+    "id": 8,
+    "imageUrl": "https://images.unsplash.com/photo-1558635924-b60e7f7e3d63?w=800",
+    "category": "Mowing",
+    "caption": "Lush green lawn maintenance"
+  },
+  {
+    "id": 9,
+    "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+    "category": "Transformations",
+    "caption": "Front yard renovation",
+    "beforeImage": "https://images.unsplash.com/photo-1572025442646-866d16c84a54?w=800"
+  },
+  {
+    "id": 10,
+    "imageUrl": "https://images.unsplash.com/photo-1572025442646-866d16c84a54?w=800",
+    "category": "Cleanups",
+    "caption": "Backyard cleaned and refreshed"
+  },
+  {
+    "id": 11,
+    "imageUrl": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800",
+    "category": "Transformations",
+    "caption": "Curb appeal overhaul",
+    "beforeImage": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800"
+  },
+  {
+    "id": 12,
+    "imageUrl": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800",
+    "category": "Mowing",
+    "caption": "Weekly mowing service result"
+  }
+]

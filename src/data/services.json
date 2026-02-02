@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Lawn Mowing",
+    "description": "Professional lawn mowing tailored to your yard's needs. We adjust cutting height by season and grass type to promote healthy, lush growth. Includes clipping cleanup and stripe finishing for a pristine look.",
+    "priceRange": "$35 - $75",
+    "icon": "GiGrassMushroom"
+  },
+  {
+    "id": 2,
+    "name": "Edging & Trimming",
+    "description": "Crisp, clean edges along driveways, sidewalks, and flower beds that frame your lawn beautifully. Our precision trimming reaches every spot mowers can't, giving your yard a polished, manicured appearance.",
+    "priceRange": "$25 - $45",
+    "icon": "GiGardeningShears"
+  },
+  {
+    "id": 3,
+    "name": "Leaf Removal",
+    "description": "Thorough leaf removal to keep your lawn healthy and your property looking its best. We use professional-grade blowers and vacuums to clear every leaf, preventing mold and turf damage.",
+    "priceRange": "$50 - $150",
+    "icon": "GiOakLeaf"
+  },
+  {
+    "id": 4,
+    "name": "Spring Cleanup",
+    "description": "Comprehensive spring preparation to kickstart your lawn's growing season. Includes debris removal, thatch raking, bed edging, and an initial mow to set the foundation for a beautiful summer yard.",
+    "priceRange": "$100 - $200",
+    "icon": "GiFlowerPot"
+  },
+  {
+    "id": 5,
+    "name": "Fall Cleanup",
+    "description": "Get your yard winter-ready with our complete fall cleanup service. We handle leaf removal, final mowing, bed preparation, and gutter clearing so your property stays protected through the cold months.",
+    "priceRange": "$100 - $200",
+    "icon": "GiMapleLeaf"
+  },
+  {
+    "id": 6,
+    "name": "Fertilization Treatment",
+    "description": "Custom fertilization programs designed for Lawrence's soil and climate conditions. We apply the right nutrients at the right time to promote deep root growth, vibrant color, and long-term lawn health.",
+    "priceRange": "$45 - $85",
+    "icon": "GiPlantSeed"
+  }
+]

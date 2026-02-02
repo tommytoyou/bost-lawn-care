@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Mitchell",
+    "location": "Old West Lawrence",
+    "rating": 5,
+    "quote": "Bost Lawn Care transformed our overgrown backyard into the envy of the neighborhood. They're punctual, professional, and the results speak for themselves. Highly recommend!"
+  },
+  {
+    "id": 2,
+    "name": "James Thompson",
+    "location": "Oread",
+    "rating": 5,
+    "quote": "I've used several lawn services in Lawrence and none compare to Bost. They pay attention to every detail — the edging, the trimming, the cleanup. My lawn has never looked better."
+  },
+  {
+    "id": 3,
+    "name": "Maria Garcia",
+    "location": "Prairie Park",
+    "rating": 5,
+    "quote": "As a busy mom, I don't have time for yard work. Bost Lawn Care takes care of everything and I never have to worry. They're reliable, friendly, and do an amazing job every single visit."
+  },
+  {
+    "id": 4,
+    "name": "Robert Chen",
+    "location": "Sunset Hills",
+    "rating": 5,
+    "quote": "The spring cleanup service was exactly what my property needed. The crew was thorough and efficient, and my yard looked incredible afterward. Great value for the quality of work."
+  },
+  {
+    "id": 5,
+    "name": "Linda Peterson",
+    "location": "Pinckney",
+    "rating": 5,
+    "quote": "We've been customers for over two years now and Bost has been consistently excellent. They treat our lawn like it's their own and it shows. Best lawn care service in Lawrence, hands down."
+  }
+]
