@@ -124,7 +124,6 @@ export default function Services() {
                     <IconComponent className="w-7 h-7 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold text-dark mb-2">{service.name}</h3>
-                  <p className="text-accent font-semibold text-lg mb-3">{service.priceRange}</p>
                   <p className="text-light-text text-sm leading-relaxed flex-grow mb-6">
                     {service.description}
                   </p>

@@ -130,7 +130,7 @@ function ServicesTab({ services, setServices }) {
 
   const startEdit = (service) => {
     setEditingId(service.id);
-    setEditForm({ name: service.name, description: service.description, priceRange: service.priceRange });
+    setEditForm({ name: service.name, description: service.description });
   };
 
   const saveEdit = () => {
@@ -153,12 +153,6 @@ function ServicesTab({ services, setServices }) {
                 placeholder="Service name"
               />
               <Input
-                name="priceRange"
-                value={editForm.priceRange}
-                onChange={(e) => setEditForm({ ...editForm, priceRange: e.target.value })}
-                placeholder="Price range"
-              />
-              <Input
                 name="description"
                 type="textarea"
                 value={editForm.description}
@@ -178,7 +172,6 @@ function ServicesTab({ services, setServices }) {
             <div className="flex items-start justify-between">
               <div>
                 <h3 className="font-bold text-dark">{service.name}</h3>
-                <p className="text-accent text-sm font-medium">{service.priceRange}</p>
                 <p className="text-light-text text-sm mt-1">{service.description}</p>
               </div>
               <Button variant="ghost" size="sm" onClick={() => startEdit(service)} className="flex-shrink-0">

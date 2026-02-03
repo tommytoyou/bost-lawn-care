@@ -57,7 +57,6 @@ export default function ServicesPreview() {
                     <IconComponent className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-bold text-dark mb-2">{service.name}</h3>
-                  <p className="text-accent font-semibold mb-3">{service.priceRange}</p>
                   <p className="text-light-text text-sm flex-grow">{service.description}</p>
                 </Card>
               </motion.div>
