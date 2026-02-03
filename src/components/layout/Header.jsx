@@ -67,8 +67,8 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:block">
-            <Link to="/booking">
-              <Button variant="accent" size="sm">Book Now</Button>
+            <Link to="/services#inquiry">
+              <Button variant="accent" size="sm">Get a Quote</Button>
             </Link>
           </div>
 
@@ -132,8 +132,8 @@ export default function Header() {
                 ))}
 
                 <div className="mt-4 pt-4 border-t">
-                  <Link to="/booking" className="block">
-                    <Button variant="accent" className="w-full">Book Now</Button>
+                  <Link to="/services#inquiry" className="block">
+                    <Button variant="accent" className="w-full">Get a Quote</Button>
                   </Link>
                 </div>
               </div>

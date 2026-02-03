@@ -66,7 +66,7 @@ export default function ServicesPreview() {
         </div>
 
         <motion.div
-          className="text-center mt-10"
+          className="text-center mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -74,6 +74,9 @@ export default function ServicesPreview() {
         >
           <Link to="/services">
             <Button variant="primary" size="lg">View All Services</Button>
+          </Link>
+          <Link to="/services#inquiry">
+            <Button variant="accent" size="lg">Get a Free Quote</Button>
           </Link>
         </motion.div>
       </div>

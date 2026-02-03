@@ -5,8 +5,6 @@ import Services from './pages/Services';
 import GalleryPage from './pages/Gallery';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Booking from './pages/Booking';
-import Payments from './pages/Payments';
 import Admin from './pages/Admin';
 import NotFound from './pages/NotFound';
 
@@ -22,8 +20,6 @@ export default function App() {
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/booking" element={<Booking />} />
-        <Route path="/payments" element={<Payments />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

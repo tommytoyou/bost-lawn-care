@@ -47,9 +47,9 @@ export default function CTABanner() {
               {business.phone}
             </Button>
           </a>
-          <Link to="/booking">
+          <Link to="/services#inquiry">
             <Button variant="outline" size="lg" className="!border-white !text-white hover:!bg-white hover:!text-primary">
-              Book Online
+              Get a Free Quote
             </Button>
           </Link>
         </motion.div>

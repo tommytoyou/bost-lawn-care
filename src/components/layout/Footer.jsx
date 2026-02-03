@@ -17,8 +17,7 @@ export default function Footer() {
     { to: '/gallery', label: 'Gallery' },
     { to: '/about', label: 'About' },
     { to: '/contact', label: 'Contact' },
-    { to: '/booking', label: 'Book Now' },
-    { to: '/payments', label: 'Payments' },
+    { to: '/services#inquiry', label: 'Get a Quote' },
   ];
 
   return (
