@@ -60,9 +60,7 @@ export default function Footer() {
             <div className="space-y-3 text-sm text-green-200">
               <p>
                 <span className="font-semibold text-white">Phone/Text:</span>{' '}
-                <a href={`tel:${business.phone}`} className="hover:text-accent transition-colors">
-                  {business.phone}
-                </a>
+                {business.phone}
               </p>
               <p>
                 <span className="font-semibold text-white">Email:</span>{' '}
