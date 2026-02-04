@@ -50,7 +50,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.div
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-4 items-start sm:items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -58,11 +58,11 @@ export default function Hero() {
             <Link to="/contact">
               <Button variant="accent" size="lg">Get a Free Quote</Button>
             </Link>
-            <a href={`tel:${business.phone}`}>
-              <Button variant="outline" size="lg" className="!border-white !text-white hover:!bg-white hover:!text-dark">
-                Call or Text Us
-              </Button>
-            </a>
+            <div className="bg-white/10 backdrop-blur-sm border-2 border-white rounded-lg px-6 py-3">
+              <p className="text-white font-semibold text-lg">
+                Call or Text for a Free Quote: {business.phone}
+              </p>
+            </div>
           </motion.div>
         </motion.div>
       </div>

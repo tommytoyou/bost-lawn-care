@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaPhone } from 'react-icons/fa';
 import Header from './Header';
@@ -35,19 +35,20 @@ export default function Layout({ children }) {
       </motion.main>
       <Footer />
 
-      {/* Sticky Mobile Call Button */}
-      <motion.a
-        href={`tel:${business.phone}`}
-        className="fixed bottom-6 right-6 bg-accent text-white px-6 py-4 rounded-full shadow-2xl flex items-center gap-2 font-semibold hover:bg-yellow-500 transition-all z-50 lg:hidden"
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 1, duration: 0.3, type: 'spring' }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        <FaPhone className="w-4 h-4" />
-        Free Quote
-      </motion.a>
+      {/* Sticky Mobile Quote Button */}
+      <Link to="/contact">
+        <motion.div
+          className="fixed bottom-6 right-6 bg-accent text-white px-6 py-4 rounded-full shadow-2xl flex items-center gap-2 font-semibold hover:bg-yellow-500 transition-all z-50 lg:hidden"
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 1, duration: 0.3, type: 'spring' }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <FaPhone className="w-4 h-4" />
+          Free Quote
+        </motion.div>
+      </Link>
     </div>
   );
 }
