@@ -1,44 +1,58 @@
 [
   {
     "id": 1,
-    "name": "Lawn Mowing",
-    "description": "Professional lawn mowing tailored to your yard's needs. We adjust cutting height by season and grass type to promote healthy, lush growth. Includes clipping cleanup and stripe finishing for a pristine look.",
-    "priceRange": "$35 - $75",
+    "name": "Lawn Care",
+    "description": "Professional lawn mowing, edging, and trimming tailored to your property's needs. We maintain your lawn at the optimal height for healthy growth while ensuring crisp edges and a pristine appearance every visit.",
+    "priceRange": "Varies by property size",
     "icon": "GiGrassMushroom"
   },
   {
     "id": 2,
-    "name": "Edging & Trimming",
-    "description": "Crisp, clean edges along driveways, sidewalks, and flower beds that frame your lawn beautifully. Our precision trimming reaches every spot mowers can't, giving your yard a polished, manicured appearance.",
-    "priceRange": "$25 - $45",
-    "icon": "GiGardeningShears"
-  },
-  {
-    "id": 3,
-    "name": "Leaf Removal",
-    "description": "Thorough leaf removal to keep your lawn healthy and your property looking its best. We use professional-grade blowers and vacuums to clear every leaf, preventing mold and turf damage.",
-    "priceRange": "$50 - $150",
-    "icon": "GiOakLeaf"
-  },
-  {
-    "id": 4,
     "name": "Spring Cleanup",
-    "description": "Comprehensive spring preparation to kickstart your lawn's growing season. Includes debris removal, thatch raking, bed edging, and an initial mow to set the foundation for a beautiful summer yard.",
-    "priceRange": "$100 - $200",
+    "description": "Comprehensive spring preparation to kickstart your lawn's growing season. We remove winter debris, rake thatch, edge flower beds, and provide an initial mow to set the foundation for a beautiful yard all season long.",
+    "priceRange": "Seasonal service",
     "icon": "GiFlowerPot"
   },
   {
-    "id": 5,
+    "id": 3,
     "name": "Fall Cleanup",
-    "description": "Get your yard winter-ready with our complete fall cleanup service. We handle leaf removal, final mowing, bed preparation, and gutter clearing so your property stays protected through the cold months.",
-    "priceRange": "$100 - $200",
+    "description": "Complete fall cleanup to prepare your property for winter. Our service includes leaf removal, final mowing, bed preparation, and debris clearing to protect your lawn and keep your property looking its best through the cold months.",
+    "priceRange": "Seasonal service",
     "icon": "GiMapleLeaf"
   },
   {
-    "id": 6,
-    "name": "Fertilization Treatment",
-    "description": "Custom fertilization programs designed for Lawrence's soil and climate conditions. We apply the right nutrients at the right time to promote deep root growth, vibrant color, and long-term lawn health.",
-    "priceRange": "$45 - $85",
+    "id": 4,
+    "name": "Storm Tree Cleanup",
+    "description": "Fast, reliable cleanup after storm damage. We remove fallen branches, debris, and damaged vegetation to restore safety and curb appeal to your property quickly and efficiently.",
+    "priceRange": "Emergency service",
+    "icon": "GiOakLeaf"
+  },
+  {
+    "id": 5,
+    "name": "Mulch & Flowerbeds",
+    "description": "Professional mulch installation and flowerbed maintenance to enhance your landscape's beauty and health. We refresh existing beds, apply quality mulch, and edge for a clean, polished look that protects your plants.",
+    "priceRange": "Landscaping service",
     "icon": "GiPlantSeed"
+  },
+  {
+    "id": 6,
+    "name": "Leaf Cleanup",
+    "description": "Thorough leaf removal to keep your lawn healthy and your property pristine. Using professional-grade equipment, we clear leaves from lawns, beds, and hardscapes to prevent turf damage and maintain a beautiful yard.",
+    "priceRange": "Seasonal service",
+    "icon": "FaLeaf"
+  },
+  {
+    "id": 7,
+    "name": "Power Washing",
+    "description": "High-pressure cleaning for driveways, sidewalks, decks, patios, and siding. We remove dirt, grime, mold, and stains to restore your home's exterior surfaces to like-new condition and boost curb appeal.",
+    "priceRange": "Varies by area",
+    "icon": "GiWaterDrop"
+  },
+  {
+    "id": 8,
+    "name": "Gutter Cleaning",
+    "description": "Professional gutter cleaning to protect your home from water damage. We remove leaves, debris, and buildup from your gutters and downspouts, ensuring proper drainage and preventing costly repairs.",
+    "priceRange": "Residential service",
+    "icon": "FaHome"
   }
 ]

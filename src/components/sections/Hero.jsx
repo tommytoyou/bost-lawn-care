@@ -8,7 +8,7 @@ import { useContent } from '../../context/ContentContext';
  */
 export default function Hero() {
   const { siteContent } = useContent();
-  const { homepage } = siteContent;
+  const { homepage, business } = siteContent;
 
   return (
     <section className="relative min-h-[600px] lg:min-h-[700px] flex items-center">
@@ -56,13 +56,13 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.6 }}
           >
             <Link to="/contact">
-              <Button variant="accent" size="lg">Get a Quote</Button>
+              <Button variant="accent" size="lg">Get a Free Quote</Button>
             </Link>
-            <Link to="/booking">
+            <a href={`tel:${business.phone}`}>
               <Button variant="outline" size="lg" className="!border-white !text-white hover:!bg-white hover:!text-dark">
-                Book Now
+                Call or Text Us
               </Button>
-            </Link>
+            </a>
           </motion.div>
         </motion.div>
       </div>

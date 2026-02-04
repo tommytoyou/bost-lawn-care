@@ -52,15 +52,15 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold text-dark text-center mb-8">Service Area</h2>
+          <h2 className="text-3xl font-bold text-dark text-center mb-8">Service Areas</h2>
           <p className="text-light-text text-center mb-8 max-w-2xl mx-auto">
-            We proudly serve the following Lawrence, KS neighborhoods and surrounding areas:
+            We proudly serve homeowners and businesses in the following Kansas communities:
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {about.serviceArea.map((area) => (
               <span
                 key={area}
-                className="bg-white px-5 py-2 rounded-full text-sm font-medium text-primary shadow-sm"
+                className="bg-white px-6 py-3 rounded-full text-base font-medium text-primary shadow-sm"
               >
                 {area}
               </span>

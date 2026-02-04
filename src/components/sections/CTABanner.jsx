@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaPhone } from 'react-icons/fa';
+import { FaPhone, FaEnvelope } from 'react-icons/fa';
 import Button from '../ui/Button';
 import { useContent } from '../../context/ContentContext';
 
@@ -21,7 +21,7 @@ export default function CTABanner() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Ready for a Beautiful Lawn?
+          Get Your Free Quote Today!
         </motion.h2>
 
         <motion.p
@@ -31,7 +31,7 @@ export default function CTABanner() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          Get started today with a free estimate. We&apos;re just a phone call or click away.
+          Contact us by phone, text, or email to discuss your lawn care needs. Free quotes, no obligation.
         </motion.p>
 
         <motion.div
@@ -44,14 +44,15 @@ export default function CTABanner() {
           <a href={`tel:${business.phone}`}>
             <Button variant="accent" size="lg" className="gap-2">
               <FaPhone className="w-4 h-4" />
-              {business.phone}
+              Call or Text: {business.phone}
             </Button>
           </a>
-          <Link to="/services#inquiry">
-            <Button variant="outline" size="lg" className="!border-white !text-white hover:!bg-white hover:!text-primary">
-              Get a Free Quote
+          <a href={`mailto:${business.email}`}>
+            <Button variant="outline" size="lg" className="!border-white !text-white hover:!bg-white hover:!text-primary gap-2">
+              <FaEnvelope className="w-4 h-4" />
+              Email Us
             </Button>
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>

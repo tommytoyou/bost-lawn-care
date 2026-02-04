@@ -32,7 +32,7 @@ export default function Footer() {
             </Link>
             <p className="text-accent font-medium mb-3">{business.tagline}</p>
             <p className="text-green-200 text-sm leading-relaxed">
-              Proudly serving Lawrence, KS with professional lawn care services since 2020.
+              Proudly serving Lawrence, Olathe, and Lenexa, KS with professional lawn care services since 2020.
               We treat every yard like our own.
             </p>
           </div>
@@ -59,7 +59,7 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-4">Contact</h3>
             <div className="space-y-3 text-sm text-green-200">
               <p>
-                <span className="font-semibold text-white">Phone:</span>{' '}
+                <span className="font-semibold text-white">Phone/Text:</span>{' '}
                 <a href={`tel:${business.phone}`} className="hover:text-accent transition-colors">
                   {business.phone}
                 </a>
@@ -71,8 +71,8 @@ export default function Footer() {
                 </a>
               </p>
               <p>
-                <span className="font-semibold text-white">Address:</span>{' '}
-                {business.address}
+                <span className="font-semibold text-white">Service Areas:</span>{' '}
+                {business.serviceAreas}
               </p>
               <p>
                 <span className="font-semibold text-white">Hours:</span>{' '}

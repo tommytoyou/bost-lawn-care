@@ -83,6 +83,7 @@ export default function Contact() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
+            <h2 className="text-2xl font-bold text-dark mb-6">Request a Free Quote</h2>
             <form onSubmit={handleSubmit} noValidate>
               <Input
                 label="Full Name"
@@ -141,39 +142,33 @@ export default function Contact() {
             </form>
           </motion.div>
 
-          {/* Right: Business Info and Map */}
+          {/* Right: Business Info */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="space-y-8"
           >
             <div className="bg-cream rounded-xl p-8">
-              <h3 className="text-xl font-bold text-dark mb-6">Get in Touch</h3>
+              <h3 className="text-2xl font-bold text-dark mb-2">Get Your Free Quote Today!</h3>
+              <p className="text-light-text mb-6">Contact us by phone, text, or email to discuss your lawn care needs.</p>
               <div className="space-y-5">
                 <div className="flex items-start gap-4">
                   <FaPhone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-dark">Phone</p>
-                    <a href={`tel:${business.phone}`} className="text-light-text hover:text-primary transition-colors">
+                    <p className="font-semibold text-dark">Phone/Text</p>
+                    <a href={`tel:${business.phone}`} className="text-light-text hover:text-primary transition-colors text-lg">
                       {business.phone}
                     </a>
+                    <p className="text-sm text-light-text mt-1">Call or text us anytime!</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <FaEnvelope className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-dark">Email</p>
-                    <a href={`mailto:${business.email}`} className="text-light-text hover:text-primary transition-colors">
+                    <a href={`mailto:${business.email}`} className="text-light-text hover:text-primary transition-colors break-all">
                       {business.email}
                     </a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <FaMapMarkerAlt className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold text-dark">Address</p>
-                    <p className="text-light-text">{business.address}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -184,21 +179,16 @@ export default function Contact() {
                     <p className="text-light-text">Sunday: Closed</p>
                   </div>
                 </div>
+                <div className="flex items-start gap-4">
+                  <FaMapMarkerAlt className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold text-dark">Service Areas</p>
+                    <p className="text-light-text">Lawrence, KS</p>
+                    <p className="text-light-text">Olathe, KS</p>
+                    <p className="text-light-text">Lenexa, KS</p>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            {/* Google Maps Embed */}
-            <div className="rounded-xl overflow-hidden shadow-md">
-              <iframe
-                title="Bost Lawn Care Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49842.60554285021!2d-95.27252!3d38.9717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87bf40c7ce479883%3A0x151713d50478ab2e!2sLawrence%2C%20KS!5e0!3m2!1sen!2sus!4v1700000000000"
-                width="100%"
-                height="300"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
             </div>
           </motion.div>
         </div>

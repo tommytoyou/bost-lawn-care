@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  GiGrassMushroom, GiGardeningShears, GiOakLeaf,
-  GiFlowerPot, GiMapleLeaf, GiPlantSeed
+  GiGrassMushroom, GiOakLeaf, GiFlowerPot, GiMapleLeaf, GiPlantSeed, GiWaterDrop
 } from 'react-icons/gi';
+import { FaLeaf, FaHome } from 'react-icons/fa';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import Input from '../components/ui/Input';
@@ -13,8 +13,8 @@ import { useLocalStorage } from '../hooks/useLocalStorage';
 import { validateEmail, validatePhone } from '../utils/helpers';
 
 const iconMap = {
-  GiGrassMushroom, GiGardeningShears, GiOakLeaf,
-  GiFlowerPot, GiMapleLeaf, GiPlantSeed,
+  GiGrassMushroom, GiOakLeaf, GiFlowerPot, GiMapleLeaf, GiPlantSeed, GiWaterDrop,
+  FaLeaf, FaHome
 };
 
 /**

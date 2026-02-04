@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  GiGrassMushroom, GiGardeningShears, GiOakLeaf,
-  GiFlowerPot, GiMapleLeaf, GiPlantSeed
+  GiGrassMushroom, GiOakLeaf, GiFlowerPot, GiMapleLeaf, GiPlantSeed, GiWaterDrop
 } from 'react-icons/gi';
+import { FaLeaf, FaHome } from 'react-icons/fa';
 import Card from '../ui/Card';
 import Button from '../ui/Button';
 import { useContent } from '../../context/ContentContext';
@@ -11,19 +11,21 @@ import { useContent } from '../../context/ContentContext';
 /* Map icon name strings from JSON to actual components */
 const iconMap = {
   GiGrassMushroom: GiGrassMushroom,
-  GiGardeningShears: GiGardeningShears,
   GiOakLeaf: GiOakLeaf,
   GiFlowerPot: GiFlowerPot,
   GiMapleLeaf: GiMapleLeaf,
   GiPlantSeed: GiPlantSeed,
+  GiWaterDrop: GiWaterDrop,
+  FaLeaf: FaLeaf,
+  FaHome: FaHome,
 };
 
 /**
- * Shows 3 featured service cards on the home page with a link to full services.
+ * Shows 4 featured service cards on the home page with a link to full services.
  */
 export default function ServicesPreview() {
   const { services } = useContent();
-  const featured = services.slice(0, 3);
+  const featured = services.slice(0, 4);
 
   return (
     <section className="py-16 lg:py-24 bg-cream">
@@ -41,7 +43,7 @@ export default function ServicesPreview() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {featured.map((service, index) => {
             const IconComponent = iconMap[service.icon] || GiGrassMushroom;
             return (
