@@ -188,7 +188,7 @@ export default function Services() {
                   value={form.phone}
                   onChange={handleChange}
                   error={errors.phone}
-                  placeholder="(785) 555-0123"
+                  placeholder="(785) 551-8146"
                   required
                 />
                 <Input

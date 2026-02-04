@@ -41,18 +41,18 @@ export default function CTABanner() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <a href={`tel:${business.phone}`}>
-            <Button variant="accent" size="lg" className="gap-2">
+          <div className="bg-white/10 backdrop-blur-sm border-2 border-white rounded-lg px-6 py-3">
+            <p className="text-white font-semibold text-lg flex items-center gap-2">
               <FaPhone className="w-4 h-4" />
-              Call or Text: {business.phone}
-            </Button>
-          </a>
-          <a href={`mailto:${business.email}`}>
+              Call or Text for a Free Quote: {business.phone}
+            </p>
+          </div>
+          <Link to="/contact">
             <Button variant="outline" size="lg" className="!border-white !text-white hover:!bg-white hover:!text-primary gap-2">
               <FaEnvelope className="w-4 h-4" />
               Email Us
             </Button>
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>
