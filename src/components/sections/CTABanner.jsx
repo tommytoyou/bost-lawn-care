@@ -1,7 +1,5 @@
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaPhone, FaEnvelope } from 'react-icons/fa';
-import Button from '../ui/Button';
+import { FaPhone } from 'react-icons/fa';
 import { useContent } from '../../context/ContentContext';
 
 /**
@@ -35,24 +33,17 @@ export default function CTABanner() {
         </motion.p>
 
         <motion.div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <div className="bg-white/10 backdrop-blur-sm border-2 border-white rounded-lg px-6 py-3">
+          <div className="bg-white/10 backdrop-blur-sm border-2 border-white rounded-lg px-6 py-3 inline-block">
             <p className="text-white font-semibold text-lg flex items-center gap-2">
               <FaPhone className="w-4 h-4" />
               Call or Text for a Free Quote: {business.phone}
             </p>
           </div>
-          <Link to="/contact">
-            <Button variant="outline" size="lg" className="!border-white !text-white hover:!bg-white hover:!text-primary gap-2">
-              <FaEnvelope className="w-4 h-4" />
-              Email Us
-            </Button>
-          </Link>
         </motion.div>
       </div>
     </section>
