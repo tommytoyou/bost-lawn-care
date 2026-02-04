@@ -1,16 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
   GiGrassMushroom, GiOakLeaf, GiFlowerPot, GiMapleLeaf, GiPlantSeed, GiWaterDrop
 } from 'react-icons/gi';
-import { FaLeaf, FaHome } from 'react-icons/fa';
+import { FaLeaf, FaHome, FaPhone, FaEnvelope, FaClock, FaMapMarkerAlt } from 'react-icons/fa';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import Input from '../components/ui/Input';
 import { useContent } from '../context/ContentContext';
-import { useLocalStorage } from '../hooks/useLocalStorage';
-import { validateEmail, validatePhone } from '../utils/helpers';
 
 const iconMap = {
   GiGrassMushroom, GiOakLeaf, GiFlowerPot, GiMapleLeaf, GiPlantSeed, GiWaterDrop,
@@ -19,24 +16,14 @@ const iconMap = {
 
 /**
  * Services page showing all 6 services in a responsive grid with animated cards,
- * plus an inquiry form at the bottom.
+ * plus contact info section at the bottom.
  */
 export default function Services() {
-  const { services } = useContent();
+  const { services, siteContent } = useContent();
+  const { business } = siteContent;
   const location = useLocation();
-  const [inquiries, setInquiries] = useLocalStorage('bost_inquiries', []);
-  const [showToast, setShowToast] = useState(false);
 
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    serviceInterest: '',
-    message: '',
-  });
-  const [errors, setErrors] = useState({});
-
-  // Scroll to inquiry form when #inquiry hash is present
+  // Scroll to contact section when #inquiry hash is present
   useEffect(() => {
     if (location.hash === '#inquiry') {
       const element = document.getElementById('inquiry');
@@ -48,42 +35,7 @@ export default function Services() {
     }
   }, [location]);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
-    if (errors[name]) {
-      setErrors((prev) => ({ ...prev, [name]: '' }));
-    }
-  };
-
-  const validate = () => {
-    const newErrors = {};
-    if (!form.name.trim()) newErrors.name = 'Name is required';
-    if (!form.email.trim()) newErrors.email = 'Email is required';
-    else if (!validateEmail(form.email)) newErrors.email = 'Please enter a valid email';
-    if (!form.phone.trim()) newErrors.phone = 'Phone number is required';
-    else if (!validatePhone(form.phone)) newErrors.phone = 'Please enter a valid phone number';
-    if (!form.message.trim()) newErrors.message = 'Please tell us about your lawn care needs';
-    return newErrors;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newErrors = validate();
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-      return;
-    }
-
-    const inquiry = { ...form, timestamp: new Date().toISOString() };
-    setInquiries([...inquiries, inquiry]);
-    setForm({ name: '', email: '', phone: '', serviceInterest: '', message: '' });
-    setShowToast(true);
-    setTimeout(() => setShowToast(false), 4000);
-  };
-
-  const scrollToInquiry = (serviceName) => {
-    setForm((prev) => ({ ...prev, serviceInterest: serviceName }));
+  const scrollToContact = () => {
     const element = document.getElementById('inquiry');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -130,7 +82,7 @@ export default function Services() {
                   <Button
                     variant="primary"
                     className="w-full"
-                    onClick={() => scrollToInquiry(service.name)}
+                    onClick={scrollToContact}
                   >
                     Get a Quote
                   </Button>
@@ -140,7 +92,7 @@ export default function Services() {
           })}
         </div>
 
-        {/* Inquiry Form Section */}
+        {/* Contact Info Section */}
         <motion.section
           id="inquiry"
           className="mt-20 scroll-mt-24"
@@ -150,93 +102,53 @@ export default function Services() {
           transition={{ duration: 0.5 }}
         >
           <div className="bg-primary rounded-2xl p-8 sm:p-12 lg:p-16">
-            <div className="max-w-2xl mx-auto text-center mb-10">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Get Your Free Quote Today
-              </h2>
-              <p className="text-green-100 text-lg">
-                Ready to transform your lawn? Fill out the form below and we&apos;ll get back to you
-                within 24 hours with a personalized quote.
-              </p>
-            </div>
-
-            <form onSubmit={handleSubmit} noValidate className="max-w-xl mx-auto">
-              <div className="bg-white rounded-xl p-6 sm:p-8 shadow-lg">
-                <Input
-                  label="Full Name"
-                  name="name"
-                  value={form.name}
-                  onChange={handleChange}
-                  error={errors.name}
-                  placeholder="John Doe"
-                  required
-                />
-                <Input
-                  label="Email"
-                  name="email"
-                  type="email"
-                  value={form.email}
-                  onChange={handleChange}
-                  error={errors.email}
-                  placeholder="john@example.com"
-                  required
-                />
-                <Input
-                  label="Phone"
-                  name="phone"
-                  type="tel"
-                  value={form.phone}
-                  onChange={handleChange}
-                  error={errors.phone}
-                  placeholder="(785) 551-8146"
-                  required
-                />
-                <Input
-                  label="Service Interest"
-                  name="serviceInterest"
-                  type="select"
-                  value={form.serviceInterest}
-                  onChange={handleChange}
-                >
-                  <option value="">Select a service (optional)</option>
-                  {services.map((s) => (
-                    <option key={s.id} value={s.name}>{s.name}</option>
-                  ))}
-                </Input>
-                <Input
-                  label="Tell Us About Your Lawn"
-                  name="message"
-                  type="textarea"
-                  value={form.message}
-                  onChange={handleChange}
-                  error={errors.message}
-                  placeholder="Describe your property, current lawn condition, and what you're looking for..."
-                  required
-                />
-                <Button type="submit" variant="accent" size="lg" className="w-full mt-2">
-                  Request My Free Quote
-                </Button>
+            <div className="max-w-xl mx-auto">
+              <div className="bg-white rounded-xl p-8 shadow-lg">
+                <h2 className="text-2xl font-bold text-dark mb-2">Get Your Free Quote Today!</h2>
+                <p className="text-light-text mb-6">Contact us by phone, text, or email to discuss your lawn care needs.</p>
+                <div className="space-y-5">
+                  <div className="flex items-start gap-4">
+                    <FaPhone className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-dark">Phone/Text</p>
+                      <p className="text-light-text text-lg">
+                        {business.phone}
+                      </p>
+                      <p className="text-sm text-light-text mt-1">Call or text us anytime!</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <FaEnvelope className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-dark">Email</p>
+                      <a href={`mailto:${business.email}`} className="text-light-text hover:text-primary transition-colors break-all">
+                        {business.email}
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <FaClock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-dark">Hours</p>
+                      <p className="text-light-text">Monday - Saturday: 7am - 7pm</p>
+                      <p className="text-light-text">Sunday: Closed</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <FaMapMarkerAlt className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-dark">Service Areas</p>
+                      <p className="text-light-text">Lawrence, KS</p>
+                      <p className="text-light-text">Olathe, KS</p>
+                      <p className="text-light-text">Lenexa, KS</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </form>
+            </div>
           </div>
         </motion.section>
       </div>
-
-      {/* Success Toast */}
-      <AnimatePresence>
-        {showToast && (
-          <motion.div
-            className="fixed bottom-6 right-6 bg-primary text-white px-6 py-4 rounded-lg shadow-xl z-50"
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            transition={{ duration: 0.3 }}
-          >
-            <p className="font-semibold">Inquiry Submitted!</p>
-            <p className="text-sm text-green-100">We&apos;ll be in touch within 24 hours.</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 }
