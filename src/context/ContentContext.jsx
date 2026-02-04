@@ -1,5 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import { createContext, useContext } from 'react';
+import { createContext, useContext, useEffect } from 'react';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 
 import defaultServices from '../data/services.json';
@@ -18,6 +18,18 @@ export function ContentProvider({ children }) {
   const [testimonials, setTestimonials] = useLocalStorage('bost_testimonials', defaultTestimonials);
   const [gallery, setGallery] = useLocalStorage('bost_gallery', defaultGallery);
   const [siteContent, setSiteContent] = useLocalStorage('bost_siteContent', defaultSiteContent);
+
+  // One-time cache clear to fix stale placeholder data from previous builds
+  useEffect(() => {
+    localStorage.removeItem('bost_services');
+    localStorage.removeItem('bost_testimonials');
+    localStorage.removeItem('bost_gallery');
+    localStorage.removeItem('bost_siteContent');
+    setServices(defaultServices);
+    setTestimonials(defaultTestimonials);
+    setGallery(defaultGallery);
+    setSiteContent(defaultSiteContent);
+  }, []);
 
   const value = {
     services,
