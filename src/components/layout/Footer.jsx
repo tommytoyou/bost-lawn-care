@@ -64,9 +64,7 @@ export default function Footer() {
               </p>
               <p>
                 <span className="font-semibold text-white">Email:</span>{' '}
-                <a href={`mailto:${business.email}`} className="hover:text-accent transition-colors">
-                  {business.email}
-                </a>
+                {business.email}
               </p>
               <p>
                 <span className="font-semibold text-white">Service Areas:</span>{' '}
