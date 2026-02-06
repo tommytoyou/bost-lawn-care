@@ -32,7 +32,7 @@ export default function Footer() {
             </Link>
             <p className="text-accent font-medium mb-3">{business.tagline}</p>
             <p className="text-green-200 text-sm leading-relaxed">
-              Proudly serving Lawrence, Olathe, and Lenexa, KS with professional lawn care services since 2020.
+              Proudly serving Lawrence, Olathe, Lenexa, and Shawnee, KS with professional lawn care services since 2026.
               We treat every yard like our own.
             </p>
           </div>

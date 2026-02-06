@@ -59,8 +59,7 @@ export default function Contact() {
                 <FaClock className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                 <div>
                   <p className="font-semibold text-dark">Hours</p>
-                  <p className="text-light-text">Monday - Saturday: 7am - 7pm</p>
-                  <p className="text-light-text">Sunday: Closed</p>
+                  <p className="text-light-text">Monday - Sunday: 7am - 7pm</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -70,6 +69,7 @@ export default function Contact() {
                   <p className="text-light-text">Lawrence, KS</p>
                   <p className="text-light-text">Olathe, KS</p>
                   <p className="text-light-text">Lenexa, KS</p>
+                  <p className="text-light-text">Shawnee, KS</p>
                 </div>
               </div>
             </div>
